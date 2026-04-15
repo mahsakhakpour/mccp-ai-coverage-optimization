@@ -1,69 +1,88 @@
 # MCCP AI Coverage Optimization Application
 
 ## Overview
-The **Maximum Circular Coverage Problem (MCCP)** project implements a hybrid algorithm to find the optimal placement of a fixed-radius circle that maximizes coverage of 2D points.
+A full-stack AI-powered system solving the **Maximum Circular Coverage Problem (MCCP)**:
+> Find the optimal location of a fixed-radius circle that maximizes coverage of 2D points.
 
-The core approach combines:
-- **DBSCAN clustering** to identify dense regions
-- **Sliding Circle optimization** to refine the best coverage position
-
-This hybrid method significantly reduces computation time while maintaining high accuracy compared to brute-force search.
+The system combines clustering + optimization + AI assistance to achieve near-optimal results with significant performance gains over brute-force methods.
 
 ---
 
-## Key Features
-- Hybrid MCCP algorithm (DBSCAN + Sliding Circle)
-- Fast approximation with high accuracy (96–99%)
-- Brute-force comparison for validation
-- Full-stack implementation with AI integration
-- Real-time parameter tuning and visualization
-- AI-driven insights and parameter recommendations
+## Key Highlights
+- Hybrid algorithm: **DBSCAN + Sliding Circle Optimization**
+- Up to **~99% faster** than brute-force search
+- Maintains **96–99% accuracy**
+- AI-assisted parameter tuning and insights
+- Real-time visualization of coverage optimization
+
+---
+
+## System Architecture
+- **Frontend:** Next.js + TypeScript (interactive UI + visualization)
+- **Backend:** Python + FastAPI (algorithm execution layer)
+- **AI Layer:** Parameter suggestion, density detection, insights engine
+
+---
+
+## Core Algorithm
+
+### 1. Density Detection (DBSCAN)
+Groups spatial points into clusters using density-based clustering.
+
+### 2. Sliding Circle Optimization
+Searches within clusters to find the circle position with maximum point coverage.
+
+### 3. Validation
+Compares results against brute-force baseline for accuracy benchmarking.
+
+---
+
+## Performance Summary
+- Brute-force baseline: O(n³) complexity (high cost)
+- Proposed method: optimized cluster-based search
+- Speed improvement: **up to ~99%**
+- Accuracy: **96–99% of optimal solution**
+
+---
+
+## Features
+- Interactive point input system
+- Adjustable clustering parameters (eps, minPts)
+- Circle radius control
+- AI-based parameter recommendations
+- Dense region detection
+- Real-time results comparison (AI vs brute-force)
+
+---
+
+## Example Output
+- Points covered: 3–4 (depending on dataset)
+- Best circle center: (5.08, 7.49)
+- Speed improvement: 98%+
+- Execution time: ~0.6s vs ~31s brute-force
 
 ---
 
 ## Tech Stack
-
-### Frontend
 - Next.js
 - TypeScript
-
-### Backend
 - Python
 - FastAPI
-
-### AI Layer
-- Parameter recommendation engine
-- Dense region detection
-- Coverage prediction & insights
+- Machine Learning / AI heuristics
 
 ---
 
-## Algorithm
-
-### 1. DBSCAN Clustering
-Groups nearby points into dense clusters based on:
-- `eps` (distance threshold)
-- `minPts` (minimum points per cluster)
-
-### 2. Sliding Circle Optimization
-For each cluster:
-- A fixed-radius circle is slid across candidate positions
-- The position maximizing point coverage is selected
-
-### 3. Validation
-Results are compared against brute-force search:
-- Coverage accuracy: 96–99%
-- Speed improvement: up to ~99%
+## Why this project matters
+This project demonstrates:
+- Algorithm design capability
+- Optimization thinking
+- Full-stack engineering skills
+- AI integration into real systems
+- Performance benchmarking against baselines
 
 ---
 
-## Performance
-- Up to ~99% faster than brute-force methods
-- Near-optimal coverage results
-- Scales efficiently with larger datasets
-
----
-
+## Project Structure
 ## How to Run
 
 ### Frontend
